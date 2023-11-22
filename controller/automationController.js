@@ -6,7 +6,7 @@ const automationController = async function (req,res) {
     // Launch site as headless through puppeteer
     // Keep headless: false if you want to see the visualization
     const browser = await puppeteer.launch({
-      headless: false,
+      headless: true,
       defaultViewport: null,
       // slowMo: 10,   // If web rendering time is slow then we can use it
       args: ['--no-sandbox']
