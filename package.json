@@ -1,0 +1,23 @@
+{
+  "name": "webautomation",
+  "version": "1.0.0",
+  "description": "This demo application is for web automation",
+  "main": "index.js",
+  "scripts": {
+    "start": "node"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajnikant-yadav/WebAutomation.git"
+  },
+  "author": "Rajnikant Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajnikant-yadav/WebAutomation/issues"
+  },
+  "homepage": "https://github.com/rajnikant-yadav/WebAutomation#readme",
+  "dependencies": {
+    "puppeteer": "^21.5.2"
+  }
+}
