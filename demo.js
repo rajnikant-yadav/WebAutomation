@@ -5,7 +5,7 @@ import details from './details.js'
     // Launch site as headless through puppeteer
     // Keep headless: false if you want to see the visualization
     const browser = await puppeteer.launch({
-      headless: true,
+      headless: false,
       defaultViewport: null,
       slowMo: 10,
       args: ['--no-sandbox']
