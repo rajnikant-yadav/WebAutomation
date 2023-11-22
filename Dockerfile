@@ -1,18 +1,26 @@
 FROM ubuntu:20.04
-# Update the package list inside the image
-RUN apt-get update
-RUN apt-get install -y chromium-browser libgtk-3-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2
-RUN apt-get install -y curl gnupg
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
-RUN apt-get install -y nodejs
-RUN apt install awscli -y
+
+# Update the package list inside the image and install necessary packages
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+        chromium-browser \
+        libgconf-2-4 \
+        libnss3 \
+        libasound2 \
+        nodejs \
+        npm \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
 WORKDIR /usr/src/app
- 
+
 COPY package*.json ./
- 
+
+# Install app dependencies
 RUN npm install
+
 COPY . .
- 
+
 EXPOSE 3000
-# CMD [ "npm", "start"]
+
 CMD ["node", "demo.js"]
