@@ -4,7 +4,8 @@
   "description": "This demo application is for web automation",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "demo": "node demo.js"
   },
   "type": "module",
   "repository": {
