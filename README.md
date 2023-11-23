@@ -10,8 +10,8 @@ To run this code, follow these steps:
    Clone this repository to your local machine.
 
 ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
+   git clone https://github.com/rajnikant-yadav/WebAutomation.git
+   cd WebAutomation
    npm install
    npm run start
    paste this url on browser you can see result
@@ -20,8 +20,8 @@ To run this code, follow these steps:
 
 ## Alternatively, if you prefer to run the web automation demonstration using the script alone, follow these streamlined steps:
 ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
+   git clone https://github.com/rajnikant-yadav/WebAutomation.git
+   cd WebAutomation
    npm install
    node demo.js
 ```
