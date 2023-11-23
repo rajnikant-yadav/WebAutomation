@@ -1,37 +1,18 @@
 FROM ubuntu:20.04
-
-# Update the package list inside the image and install necessary packages
-RUN apt-get update \
-    && DEBIAN_FRONTEND=noninteractive apt-get install -y \
-    chromium-browser \
-    libgconf-2-4 \
-    libnss3 \
-    libasound2 \
-    libatk-bridge2.0-0 \
-    libgtk-3-0 \
-    libdrm2 \
-    curl \
-    wget
-
-# Install Node.js 18
-RUN curl -sL https://deb.nodesource.com/setup_18.x | bash - \
-    && apt-get install -y nodejs \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-
-# Set the working directory
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get update
+RUN apt-get install -y chromium-browser libgtk-3-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2
+RUN apt-get install -y curl gnupg
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
+RUN apt-get install -y nodejs
 WORKDIR /usr/src/app
-
-# Copy package.json and package-lock.json to the working directory
+ 
 COPY package*.json ./
+ 
 
-# Install app dependencies
 RUN npm install
-
-# Copy the rest of the application files
 COPY . .
-
-# Expose port 3000
+ 
 EXPOSE 3000
 
 # Specify the command to run your application
