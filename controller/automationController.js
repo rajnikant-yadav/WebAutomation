@@ -20,7 +20,7 @@ const automationController = async function (req,res) {
     page.setDefaultNavigationTimeout(120000)
 
     // Site URL
-    await page.goto('https://bukabantuan.bukalapak.com/form/175', {
+    await page.goto(`${details['siteUrl']}`, {
       waitUntil: 'networkidle0'
     })
     await new Promise(resolve => setTimeout(resolve, 100))
