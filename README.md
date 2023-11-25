@@ -20,7 +20,12 @@ To run this code, follow these steps:
    bash
   docker pull rajnikant98/webautomation
   docker run -p 3000:3000 4f8fd11e6106
-```
+  ## OR
+  ##docker run -p 8080:3000 -d 4f8fd11e6106
+  ## docker stop $(docker ps -q --filter "publish=3000") 
+#   docker stop <container_id>
+# docker rm <container_id>
+``` 
 
 ## Alternatively, if you prefer to run the web automation demonstration using the script alone, follow these streamlined steps:
 
