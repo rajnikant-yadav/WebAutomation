@@ -16,9 +16,14 @@ To run this code, follow these steps:
    npm run start
    paste this url on browser you can see result
    http://localhost:3000/automation/user/1245
+   ## OR
+   bash
+  docker pull rajnikant98/webautomation
+  docker run -p 3000:3000 4f8fd11e6106
 ```
 
 ## Alternatively, if you prefer to run the web automation demonstration using the script alone, follow these streamlined steps:
+
 ```bash
    git clone https://github.com/rajnikant-yadav/WebAutomation.git
    cd WebAutomation
