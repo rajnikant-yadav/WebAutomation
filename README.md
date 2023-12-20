@@ -14,17 +14,22 @@ To run this code, follow these steps:
    cd WebAutomation
    npm install
    npm run start
-   paste this url on browser you can see result
+   paste these url on browser you can see result
+   http://localhost:3000/ping            // you get response pong
    http://localhost:3000/automation/user/1245
-   ## OR
-   bash
+
+  OR
   docker pull rajnikant98/webautomation
-  docker run -p 3000:3000 4f8fd11e6106
-  ## OR
-  ##docker run -p 8080:3000 -d 4f8fd11e6106
-  ## docker stop $(docker ps -q --filter "publish=3000") 
-#   docker stop <container_id>
-# docker rm <container_id>
+  docker images    
+  docker run -p 3000:3000 -d <image_id>
+  docker ps
+  docker logs -f  <container_id>
+  // test with
+  paste these url on browser you can see result
+  http://localhost:3000/ping            // you get response pong
+  http://localhost:3000/automation/user/1245
+  docker stop <container_id>
+  docker rm <container_id>
 ``` 
 
 ## Alternatively, if you prefer to run the web automation demonstration using the script alone, follow these streamlined steps:
